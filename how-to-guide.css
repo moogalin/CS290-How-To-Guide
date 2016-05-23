@@ -1,0 +1,71 @@
+
+body {
+  background-color: dimgray;
+  padding-top: 100px;
+}
+#header {
+  background-color: lightgrey;
+
+
+}
+
+.content {
+  text-align:justify;
+
+}
+
+.dl-horizontal {
+  font-size: 20px;
+  padding-top: 20px;
+  text-align:justify;
+}
+
+.lead {
+  padding: 20px;
+}
+
+#body {
+  outline-color:black;
+  background-color:white;
+}
+
+.sectionHead {
+  padding-top: 75px;
+  background-color: whitesmoke;
+  text-align:left;
+
+}
+a {
+  color: darkgray;
+}
+
+a:hover {
+  color: black;
+  text-decoration:
+}
+
+pre {
+  width:50%;
+}
+.panel.panel-default {
+    padding: 20px;
+}
+
+.panel-title {
+  font-weight:bold;
+}
+
+.col-md-8 {
+  background-color: whitesmoke;
+
+
+
+}
+
+p {
+  text-align:justify;
+}
+
+.footer {
+  text-align: center;
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Bootstrap Template -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> How-To-Guide </title>
+  <!-- Bootstrap Latest compiled and minified CSS
+  <    Source: getbootstrap.com/getting-started -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Bootstrap Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="how-to-guide.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <a class="navbar-brand"> Navigate </a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#top"> Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#intro"> About APIs </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutGiphy"> About Giphy </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#codesampleURL"> Retrieve data from GET url </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#codesampleAjax"> Retrieve data using Ajax request </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#moreInfo"> Additional Resources </a>
+        </li>
+      </ul>
+    </nav>
+    <p>
+
+  <div class="jumbotron" id="top">
+    <h1>How-To Guide <small> Learn how to access and use the Giphy API</small></h1>
+  </div>
+
+  <!--
+  <div class = "container" id="header">
+    <div class="row">
+      <div class="col-md-8"> <h1>How-To Guide <small> Learn how to access and use the petfinder API</small></h1> </div>
+      <div class="col-md-4"></div>
+
+      </div>
+    </div>
+  -->
+
+
+  <div class = "container" id="body">
+
+  <div row
+    <p>
+
+    <!--
+    <blockquote>This is the body container
+    <footer> Someone famous </footer>
+    </blockquote>
+    -->
+
+  <h2 class="sectionHead" id="intro"> What is an API? <small> And how do I use one? </small></h2>
+  </button>
+
+  <dl class="dl-horizontal">
+  <dt>API</dt><dd>Application Programmer Interface.</dd>
+  <dt>Uses</dt><dd>Adds external functionality to web applications and simplifies certain processes like information retrieval.</dd>
+  <dt>Example</dt><dd>Suppose you are starting a garden and wish to grow cucumbers. To facilitate this,
+  you may access a web application that tells you the best month for planting cucumbers. The web application that you use may contain a script
+  that calls a specific API that can access specific information about seasonal growth patterns.</dd>
+  <dt>Access</dt><dd>To access an API from your own web application, you often need an <mark>API key</mark>. The API key is a specific sequence of numbers and letters
+  included in an applications' call to the specified API that lets the API server know who is calling it and allows for usage monitoring.</dd>
+  <dt>Obtain a key </dt><dd> The documentation page of an API contains information on obtaining an API key, if necessary. Often you need to create an account and agree to
+  usage terms before receiving an API key.</dd>
+  <dt>Sharing a key </dt><dd> Short answer: <em> Don't.<span class="glyphicon glyphicon-exclamation-sign"></span> </em> <br>Anyone with access to your API key can make requests to the API server. And too many requests may
+  place your application in a premium services threshold, which will cost premium dollars, not to mention other security risks. </dd>
+  </dl>
+
+  <!--
+  <p class="lead">
+  APIs are useful tools to add functionality to web applications and simplify certain processes.
+  Like functions in object-oriented languages, APIs are called by their user to perform a specific task.
+  Some APIs, for example, return information requested by the user, while others save information sent by the user.
+  Using APIs can help automate otherwise redundant tasks like information retrieval.
+  For example, if you are starting a garden and have specific produce in mind that you wish to grow,
+  you may access a web application that tells you the best month in which to plant cucumbers. The web application that you are using likely contains a script
+  that calls a website API that can access specific information about seasonal growth patterns.
+  </p>
+  -->
+
+
+  <h2 class="sectionHead" id="aboutGiphy"> Where are the Giphy APIs? <small> Where can I access them? </small></h2>
+  <!-- <p class="lead"> -->
+
+  <dl class="dl-horizontal">
+  <dt>Giphy</dt><dd>Pronounced like Gif-E (with a hard G as in Gif), although this is <em>somewhat</em> up for debate.<br>
+  Giphy is a website that allows users to access and upload Gifs for use anywhere on the web. </dd>
+
+  <dt>Gif</dt><dd>Gif stands for Graphics Interchange Format. This image type has been around for 25+ years and was first useful in facilitating
+  the display of small animated images that could load quickly. Now, Gifs are used in a variety of web applications and are particularly popular in
+  in social networking and online chat networks. </dd>
+  <dt>Getting Started</dt><dd>The developer headquarters for accessing Giphy's API is <a href ="https://api.giphy.com/">here.</a>
+    <br>When you reach the developer homepage, you will see an image similar to the one below. Click the blue get started link to view their API documentation,
+    code samples, and begin! <br>If you have trouble getting to their documentation, the direct link is <a href="https://github.com/Giphy/GiphyAPI#upload-api"> here. </a>
+  </dd>
+  <dt>The Giphy API Key</dt><dd> For our purposes, Giphy provides a public beta API key. Although required in our requests, we do not need to create an account to use it!</dd>
+  </dl>
+
+  <p class="lead">
+    When you reach the developer homepage, you will see the above image. Click the blue get started to view the documentation, code samples, and begin!
+    If you reach their GitHub documentation site with the following Gif image, you are in the right place.
+  </p>
+
+
+  <img src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif" class="img-thumbnail img-responsive center-block">
+  <p></p>
+
+
+  <h2 class="sectionHead" id="codesampleURL"> Okay, I can access the Giphy API documentation. <small> What now? </small></h2>
+  <p class="lead">
+    You'll notice that the documentation does a great job of showing code sent back when a specific call is sent to the server. Further, the documentation adequately
+    defines the information necessary (and optional) to send.  However, the documentation is lacking
+    in specific use cases with code samples. This is where we come in! Together, we will go through a specific GET request to the api together.
+  </p>
+
+  <dl class="dl-horizontal">
+  <dt> GET requests </dt>
+  <dd> When we make a call to the Giphy API, we are really acting as the <mark>client </mark> making a call to a specific <mark> server.</mark>
+    This method of communication is called Hyper-Text Transfer Protocol (HTTP) and the specific call that we make is a GET request.
+    In general, a GET request is a request to retrieve data, as opposed to sending data (a POST request). </dd>
+  </dl>
+
+  <p class="lead">
+    In a GET request, the query is appended to the base url. As demonstrated below, the URL contains a base URL (url.com/?) plus a number of name/value combinations
+    that represent the search query. Some GET requests expect several pieces of data, in which case you may have several name/value pairs. Lastly, most GET requests
+    require an apiKey, as discussed previously.
+    <center><pre><var> URL </var> = <var> url.com/? </var> + <var> &amp;name1=value1</var> + <var> &amp;name2=value2</var> + <var> &amp;apiKey</var></pre></center>
+
+  <p class="lead">
+    Let's try it out.
+    <div class="panel panel-default">
+      <div class="panel-heading">
+    <h3 class="panel-title">Task: Use GET Requests to search for an image of a funny kid using the Giphy API</h3>
+      </div>
+      <div class="panel-body">
+        <button type="button" class="btn btn-info btn-default" data-toggle="collapse" data-target="#getExample"> Answer </button>
+        <div id="getExample" class="collapse">
+        <br>
+        One of the features of the Giphy API, is the ability to search for relevant Gifs based on a keyword. To call the API, we need to append the base URL correctly with <thead>
+        correct elements. The main components of the URL are as follows (though view the existing documentation for additional optional elements):
+        </thead>
+        <br><br>
+
+        <code>
+        BaseURL = http://api.giphy.com/v1/gifs/search?q= <br>
+        searchTerm = funny+kid <br>
+        apiKey =  &amp;api_key=dc6zaTOxFJmz
+        Final URL = http://api.giphy.com/v1/gifs/search?q=funny+kid&api_key=dc6zaTOxFJmzC </code><br>
+
+        <br><div class="alert alert-danger" role="alert">Warning! Pay close attention to the following code: searchTerm = funny+kid</div>
+        <br> Notice how the search term includes a '+' between subsequent words. This is important but can be forgotten, there are no spaces in URLs. If everything went correctly and you pasted the correct URL, in the browser,
+        then you should see a large data object that contains an array of 25 objects. Each of the 25 objects corresponds to a single search result for "funny kid." Since we did not specify the amount of search
+        results that we wanted, the server defaulted to 25.
+        <br><br> <strong> Hint: </strong>
+        <br>In the next section,
+        if you create Javascript code that retrieves a user submission for the search term, you may need to edit the string to replace each ' ' with '+'.
+
+
+
+      </div>
+      </div>
+    </div>
+
+  <h2 class="sectionHead" id="codesampleAjax"> How can I retrieve Giphy search data on my web application? <small> and can I add it to my web page? </small></h2>
+  <p class="lead">
+      Although it was a useful start to use the appropriate URL to send a get request to the Giphy server, the purpose of this API is to allow your web application to retrieve specific
+      Giphy data for use in your webpages. To do this, we will use Javascript in combination with <mark> Ajax. </mark>
+
+      <dl class="dl-horizontal">
+      <dt> What is Ajax? </dt>
+      <dd> Ajax stands for Asynchronous Javascript and XML. Ajax is popular because it allows an HTTP call (ie. Get request) from the client to be made to the appropriate server as an asynchronous
+        process. In this case, asynchronous means that a single request in one part of the web page can be processed simultaneously while the rest of the page loads. And when a change is made by the user (for example they click 'submit'),
+        the entire browser window does not need to be reloaded, just the part of the page that was updated by the script. This differs from a standard synchronous process which requires
+        the entire script to be processed before the browser can move to loading the rest of the webpage and requires that the browser is reloaded to render changes.
+       </dd>
+      <dt> An example </dt>
+      <dd> The ajax processing model is used all over the internet. A prominent example would be an online shopping cart. When you add something to your cart on Amazon.com, your cart is updated without you
+        ever having to leave the page you are currently browsing. Another example is found in the 'Create Username' field of many account creation forms. When you enter a username that is already reserved, asynchronous processing notifies you
+        that the 'username is taken' as opposed to requiring that you submit the form and reload the page to view the appropriate error message.</dd>
+      </dl>
+
+    Now, let's formulate a basic request to view the information that we retrieved from the Giphy server. Again, we will use the search term "funny+kid." The data that we retrieve will be in <mark> JSON </mark> format which
+    is a specific way to represent the data that is comparable to Javascript object notation.
+  </p>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+    <h3 class="panel-title">Task: Use Ajax to print to the console the JSON object retrieved from Giphy</h3>
+      </div>
+      <div class="panel-body">
+        <button type="button" class="btn btn-info btn-default" data-toggle="collapse" data-target="#getExample2"> Answer </button>
+        <div id="getExample2" class="collapse">
+
+          <br>
+          The following code allows you to print the Giphy information retrieved from a search for images of "funny+kid." The code may look complicated so we will divide it into small chunks and go over
+          each piece to understand how it comes together.
+          <br>
+          <strong> Code solution: </strong>
+          <iframe width="100%" height="300" src="//jsfiddle.net/L8L9ah33/4/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>          <br>
+          The javascript contained below is also running on this webpage. To view the console output from this code using Google Chrome, right-click and select
+          'inspect' from the menu. At the bottom right you should see the console, it should look like the following image.
+          <br><br>
+          <strong> Accessing the Google Chrome console: </strong>
+          <img src="console.jpg" class="img-thumbnail img-responsive center-block">
+          <p></p>
+
+          <br>
+          <strong> Step One: Create Get Request Url (you should be familiar with this) </strong>
+          <br>
+          <iframe width="100%" height="300" src="//jsfiddle.net/gmhcpj1z/3/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>          As the code snippet above shows, the first elements I included in my script were variables that I can use to create my request URL. Notice that my searchTerm
+          variable is defined inside of my script. On a live webpage, I may prefer to use <mark> DOM </mark> (the document object model) to access a submission field and retrieve the users'
+          string and assign it to the variable searchTerm.
+          <br>
+          Remember when I mentioned that URLs do not have spaces? Below my assignment of variables, I took advantage of the Javascript string method replace to replace each instance of ' '
+          with '+'. Additionally, I use the identifier '//g' to indicate that this is a global replacement. So, all instances of ' ' are replaced by '+' as you can see by viewing the console output
+          before and after editing the string.
+          <br><br>
+          <strong> Step Two: Create the Request </strong>
+          <br>
+          <iframe width="100%" height="300" src="//jsfiddle.net/3mvoxtup/1/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+          Notice that we first create a new variable <abbr title="XML HTTP Request"> xhr </abbr>. Using new, we create a new XML HTTP Request object.
+          <br>Now, notice the following code:
+          <br><code> xhr.onload = function() { ... } </code>
+          <br>This triggers an anonymous function to run once our HTTP request object receives a response from the server. At this point in the script, we have not opened or sent a request,
+          so we will return to this function later.
+          <br><br>Now that we have created our object, we are going to open up a new request by accessing the open method of our object xhr.
+          <br>The open request must be passed the following parameters: <br>
+          <strong> xhr.open('method', url, isAsynchronous)</strong>
+
+                <dl class="dl-horizontal">
+                <dt> 'Method' </dt>
+                  <dd> This parameter represents the method of our HTTP request. As in our example above, we are making a 'Get' request to the Giphy server.
+                  </dd>
+                <dt> url </dt>
+                  <dd> This parameter represents the URL that will accept our request. Now that we have appended the relevant information, our URL is complete.</dd>
+                <dt> isAsynchronous </dt>
+                  <dd> This parameter is a boolean variable indicating if we will pass our request asychronously (true) or not (false).</dd>
+                </dl>
+          <br>
+          <div class="alert alert-danger" role="alert">Warning! Pay close attention to the following code: xhr.setRequestHeader(...)</div>
+          <br>
+          When we are preparing our request to send to the Giphy server, the server expects us to request specific kinds of data. In this case, we are including a header to let the server know that
+          we wish to retrieve JSON content. If we request the wrong content, for example, we may encounter a server code 403 (forbidden) because the server recognizes our request but it is not allowed.
+          In the case of our search request to Giphy, we may exclude the header information, but some APIs require it.
+          <br>
+          <br>
+          Since the <code> xhr.send(null) </code> is relatively self-explanatory, I will only briefly mention it. When we send the request we may be required to send more data, in which case we would replace
+          'null' with a specified parameter.
+          <br><br>
+          Now, we have traced our code from beginning to end. If we are the client, the get request has been sent asynchronously, and the server's response should be loaded. So, let's discuss the code contained
+          inside of our anonymous function.
+          <br>
+          <script async src="//jsfiddle.net/dfLuao04/embed/js,result/dark/"></script>
+          In our function, we have included a conditional statement to execute code only if the server responds with code 200 ('OK').
+          Since this condition passed, we are able to access the information returned from the server and assign it to our variable responseObject.
+          <br><br>
+          It is important that we translate the JSON data into a form that we can use, namely a Javascript object. We are able to do this with the following code:
+          <br> <code> var responseObject = JSON.parse(xhr.responseText) </code>
+          <br> Now that our data is in a usable form, we can access elements of our data and display them on our webpage (or in this case the console).
+          <br> We can log the entire object that we retrieved from the server <code> console.log(responseObject) </code> or we can access specific object properties.
+          <br> Notice that responseObject contains a property data which is an array of objects. To access an element within that array, we have to select the proper index
+          of our array data and then select the relevant property.
+          <br> As you can see, order matters.
+          <br> <strong> We access responseObject --> then we access data[index] --> then we access the next property (ie. url in this example).</strong>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Task: Put it together and use the DOM to append 10 images of funny kids to your webpage</h3>
+            </div>
+        <div class="panel-body">
+          <button type="button" class="btn btn-info btn-default" data-toggle="collapse" data-target="#getExample3"> Answer </button>
+            <div id="getExample3" class="collapse">
+
+            <br> <span id="results"> Here are ten images of funny kids, which one is your favorite? <br> </span>
+
+            <br> <strong> Did you successful add images to your webpage? </strong>
+            <br> If not, you could've added the images to your website with the following code:
+            <br>
+            <iframe width="100%" height="300" src="//jsfiddle.net/zy3qbdbu/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+            <br><br>
+            The only difference between this code and our previous console output code is the addition of a second for loop to the anonymous function. <br>
+            With each iteration of the for loop, we access a specific element of our page by id using
+            <br> <code> document.getElementById('results') </code>
+            <br> Then, we create a new new image tag using
+            <br> <code> document.createElement('img') </code>
+            <br>
+            <br> Finally, we add to our img tag the url of our image retrieved from the Giphy API.
+            <br> When we append the 'img src' tag to our 'results' element, the images are now on our webpage!
+            <br>
+
+          </div>
+        </div>
+      </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">The final challenge: Allow the user to click a button to view a random trending GIF </h3>
+                  </div>
+              <div class="panel-body">
+                <button type="button" class="btn btn-info btn-default" data-toggle="collapse" data-target="#getExample4"> Answer </button>
+                  <div id="getExample4" class="collapse">
+
+            <br> Would you like to see a random trending GIF?
+            <br> <input class="btn btn-default" type="button" id="random" value="Yes">
+                        <br> <span id="results2"> <br> </span>
+
+                        <br> This example encompasses much of the code that we've gone over so far.
+                        <iframe width="100%" height="300" src="//jsfiddle.net/33cct27n/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <br>
+                        <br>The new code that we added: <code>   document.addEventListener('DOMContentLoaded', bindButtons) </code>
+                        calls the bindButtons function when the DOM Content Loaded event occurs. This means, once the document is fully loaded,
+                        the user may press the button to generate a random Gif.
+                        <br>
+                        Now, inside our function that binds an event to our button, we add another event listener.
+                        This time, when the user 'clicks' on the button, a function is called that creates a new HTTP Get Request for a random
+                        trending Gif from the Giphy API. The function called, is nearly the same as our previous examples, so no further explanation is needed.
+                        <br>
+                        Notice one addition, however, we add <code> event.preventDefault </code> to the end of our request. This prevents the browser
+                        from refreshing or attempting to navigate to a new URL.
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+  </p>
+
+  <h2 class="sectionHead" id="moreInfo"> I am looking for more information about APIs, HTTP, and requests <small> What sources do you have? </small></h2>
+  <p class="lead">
+  In drafting this guide, I used a large compilation of sources for which I wish to give credit. In addition to referencing lecture materials for my Oregon State University
+  Web Development course, I would like to acknowledge the following resources:
+  <dl class="dl-horizontal">
+  <dt> Bootstrap </dt>
+  <dd> <a href="http://getbootstrap.com/"> Documentation for the framework that aided in the creation of this site </a></dd>
+  <dt> Giphy API </dt>
+  <dd> <a href="https://github.com/Giphy/GiphyAPI"> Documentation for the Giphy API used in this how-to guide </a></dd>
+  <dt> HTTP/Get</dt>
+  <dd> <a href="http://www.w3schools.com/tags/ref_httpmethods.asp"> A useful and brief tutorial on client server communication </a></dd>
+  <dt> Ajax/ The DOM </dt>
+  <dd> Javascript and JQuery by Jon Duckett </dd>
+  <dt> + All Else</dt>
+  <dd> Oregon State CS290 Web Development Lecture and Reading Materials </dd>
+
+  </dl>
+
+  </p>
+
+
+  </div>
+
+</div>
+
+  <div class="footer">
+    <p>Copyright (c) 2016 Megan Aldridge</p>
+  </div>
+
+
+  <!-- JQuery CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Bootstrap CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- Personal JS file -->
+  <script src="how-to-guide.js"></script>
+</body>
+
+</html>
